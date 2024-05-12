@@ -21,10 +21,10 @@ def name(first_name, last_name, age=False):
 name('A', 'ku', 'b')
 
 
- unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
- completed_models = []
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
  
- while unprinted_designs:
+while unprinted_designs:
     current_design = unprinted_designs.pop()
     print("Printing model: " + current_design)
     completed_models.append(current_design)
@@ -43,6 +43,8 @@ def make_pizza(*toppings):
     print("\nMaking a pizza with the following toppings:")  
     for topping in toppings:
         print("- " + topping)
+    
+    print(toppings)
  
     
 
@@ -72,8 +74,13 @@ example_function(1, 2, 3, 4, arg1=5, arg2=6, arg3=7, kwarg1="kwarg1", kwarg2="kw
 example_function(1, 2, 3, 4, 10,11, arg1=5, arg2=6, arg3=7, kwarg1="kwarg1", kwarg2="kwarg2")
 example_function(1, 2,5,6,7 ,arg1=5, arg2=6, arg3=7, kwarg1="kwarg1", kwarg2="kwarg2")
 
+
+# these cause errors
 example_function(1, 2,4,keyword_arg1=3,arg1=5, arg2=6, arg3=7, kwarg1="kwarg1", kwarg2="kwarg2")
 example_function(1, 2,4,keyword_arg1=3,keyword_arg2=3,arg1=5, arg2=6, arg3=7, kwarg1="kwarg1", kwarg2="kwarg2")
+
+# this is wieder gut
+example_function(1, 2,4,keyword_arg2=3,arg1=5, arg2=6, arg3=7, kwarg1="kwarg1", kwarg2="kwarg2")
 
 
 # sandwiches
